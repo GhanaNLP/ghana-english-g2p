@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ghana-english-g2p"
+version = "0.1.0"
+description = "Ghanaian English grapheme-to-phoneme conversion: a Ghanaian pronunciation lexicon, with espeak-ng behind it for out-of-vocabulary words."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [{ name = "GhanaNLP" }]
+keywords = ["g2p", "grapheme-to-phoneme", "ipa", "phonemizer", "ghana", "english", "tts", "asr"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Text Processing :: Linguistic",
+]
+dependencies = ["espeak-english>=0.1"]
+
+[project.urls]
+Homepage = "https://github.com/GhanaNLP/ghana-english-g2p"
+Source = "https://github.com/GhanaNLP/ghana-english-g2p"
+Issues = "https://github.com/GhanaNLP/ghana-english-g2p/issues"
+
+[project.scripts]
+ghana-english-g2p = "ghana_english_g2p.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+ghana_english_g2p = ["data/*.tsv.gz"]
