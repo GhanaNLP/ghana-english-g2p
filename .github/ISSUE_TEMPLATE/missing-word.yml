@@ -1,0 +1,32 @@
+name: A word is missing
+description: A Ghanaian word the lexicon does not have
+labels: ["pronunciation", "missing"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A pull request is even better than an issue — see CONTRIBUTING.md. But an
+        issue is genuinely useful: a name nobody records is a name every system
+        mispronounces.
+  - type: textarea
+    id: words
+    attributes:
+      label: The word or words
+      placeholder: |
+        Amankwaa
+        Nsawam
+        Dzorwulu
+    validations:
+      required: true
+  - type: textarea
+    id: sound
+    attributes:
+      label: How they are said
+      description: Rhymes or syllables are fine. IPA if you have it.
+    validations:
+      required: true
+  - type: input
+    id: origin
+    attributes:
+      label: Language or region
+      placeholder: Ga, a suburb of Accra

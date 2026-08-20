@@ -1,0 +1,7 @@
+blank_issues_enabled: true
+contact_links:
+  - name: A voice mispronounces something, but the lexicon looks right
+    url: https://github.com/GhanaNLP/poto-tts/issues
+    about: >
+      Then it is the TTS front-end rather than the lexicon: which entries it uses,
+      or how it reads them. Report it against poto-tts.

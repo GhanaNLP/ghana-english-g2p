@@ -1,0 +1,36 @@
+name: A word is pronounced wrongly
+description: A Ghanaian word this lexicon has, but gets wrong
+labels: ["pronunciation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        You do not need to know IPA. Recognising that a name is wrong is the part
+        that cannot be done from the outside — describing it is enough.
+  - type: input
+    id: word
+    attributes:
+      label: The word
+      placeholder: Kufuor
+    validations:
+      required: true
+  - type: textarea
+    id: should
+    attributes:
+      label: What should it sound like?
+      description: A rhyme, a syllable breakdown, or IPA — whichever is easiest.
+      placeholder: koo-FWOR, three sounds not four; the r is barely there
+    validations:
+      required: true
+  - type: input
+    id: current
+    attributes:
+      label: What it says now
+      description: "Optional: `poto-tts --phonemes \"<the word>\"`"
+      placeholder: kjuːfjˈuːɔːɹ
+  - type: input
+    id: origin
+    attributes:
+      label: Language or region
+      description: Akan, Ga, Ewe, Dagbani, Hausa, a place, a family name...
+      placeholder: Akan family name
